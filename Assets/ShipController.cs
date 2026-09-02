@@ -3,19 +3,24 @@ using UnityEngine.InputSystem;
 
 public class ShipController : MonoBehaviour
 {
+  Vector2 movement = Vector2.zero;
+
+  float speed = 5f;
+
   void Start()
   {
 
   }
-
+ 
   void Update()
   {
-    Vector2 movement = new(0.1f, 0);
-    transform.Translate(movement);
+    transform.Translate(movement * speed * Time.deltaTime);
   }
+  
   
   void OnMove(InputValue value)
   {
-    print("I'd like to move it, move it");
+    movement = value.Get<Vector2>();
+    // print("I'd like to move it, move it");
   }
 }
