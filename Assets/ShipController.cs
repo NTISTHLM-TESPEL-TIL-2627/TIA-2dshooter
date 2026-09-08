@@ -6,17 +6,11 @@ public class ShipController : MonoBehaviour
   Vector2 movement = Vector2.zero;
 
   float speed = 5f;
-
-  void Start()
-  {
-
-  }
  
   void Update()
   {
     transform.Translate(movement * speed * Time.deltaTime);
   }
-  
   
   void OnMove(InputValue value)
   {

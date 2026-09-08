@@ -1,11 +1,22 @@
 [Licensing::Module] Trying to connect to existing licensing client channel...
 Built from '6000.5/staging' branch; Version is '6000.5.8f1 (5cb7df797b7d) revision 6076383'; Using compiler version '194234433'; Build Type 'Release'
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-krank" at "2026-09-06T17:58:12.8888059Z"
 OS: 'Windows 11  (10.0.26220) Professional' Language: 'en' Physical Memory: 65165 MB
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-krank" at "2026-09-01T16:22:12.8558898Z"
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
 System  architecture: x64
 Process architecture: x64
-Date: 2026-09-01T16:22:12Z
+Date: 2026-09-06T17:58:12Z
+[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 24624, path: "C:/Program Files/Unity Hub/UnityLicensingClient_V1/Unity.Licensing.Client.exe")
+[Licensing::Module] LicensingClient has failed validation; ignoring
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.18.3+d7ffd15
+  Session Id:              e1c781afb246410289c5fd02ee408b19
+  Correlation Id:          60e764d19da8d4760dae2e303dbdfc23
+  External correlation Id: 7808390327543701223
+  Machine Id:              tZrLmtu1YNEJ3A39E52V3q1A25E=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-krank" (connect: 0.00s, validation: 0.00s, handshake: 0.03s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-krank-notifications" at "2026-09-06T17:58:12.920743Z"
+[Licensing::Module] Licensing Background thread has ended after 0.03s
 
 COMMAND LINE ARGUMENTS:
 C:\Program Files\Unity\Hub\Editor\6000.5.8f1\Editor\Unity.exe
@@ -15,13 +26,13 @@ C:\Program Files\Unity\Hub\Editor\6000.5.8f1\Editor\Unity.exe
 -name
 AssetImportWorkerHW0
 -projectPath
-C:/DEV/NTI/2026-2027 Programmering/2dshooterbase6.2-main
+C:/DEV/NTI/2026-2027 Programmering/TIA 2dshooter
 -logFile
 Logs/AssetImportWorkerHW0.log
 -srvPort
-54712
+60849
 -parentPid
-588
+21156
 -analyticsCloudUserId
 anonymous
 -analyticsLocalProjectId
@@ -44,8 +55,8 @@ LicenseClient-krank
 -force-d3d12
 -name
 AssetImport
-Successfully changed project path to: C:/DEV/NTI/2026-2027 Programmering/2dshooterbase6.2-main
-C:/DEV/NTI/2026-2027 Programmering/2dshooterbase6.2-main
+Successfully changed project path to: C:/DEV/NTI/2026-2027 Programmering/TIA 2dshooter
+C:/DEV/NTI/2026-2027 Programmering/TIA 2dshooter
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
@@ -82,14 +93,14 @@ C:/DEV/NTI/2026-2027 Programmering/2dshooterbase6.2-main
     "memorysetup-job-temp-allocator-block-size=2097152"
     "memorysetup-job-temp-allocator-block-size-background=1048576"
     "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
-Player connection [24056]  Target information:
+Player connection [3352]  Target information:
 
-Player connection [24056]  * "[IP] 172.18.96.1 [Port] 0 [Flags] 2 [Guid] 1758419133 [EditorId] 1758419133 [Version] 1048832 [Id] WindowsEditor(7,Monster) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [3352]  * "[IP] 172.25.160.1 [Port] 0 [Flags] 2 [Guid] 25820056 [EditorId] 25820056 [Version] 1048832 [Id] WindowsEditor(7,Monster) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [24056]  * "[IP] 192.168.50.207 [Port] 0 [Flags] 2 [Guid] 1758419133 [EditorId] 1758419133 [Version] 1048832 [Id] WindowsEditor(7,Monster) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [3352]  * "[IP] 192.168.50.207 [Port] 0 [Flags] 2 [Guid] 25820056 [EditorId] 25820056 [Version] 1048832 [Id] WindowsEditor(7,Monster) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [24056] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [24056] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [3352] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [3352] Host joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 9
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
@@ -103,7 +114,7 @@ Library Redirect Path: Library/
 [Physics::Module] Threading Mode: Multi-Threaded
 Initialize engine version: 6000.5.8f1 (5cb7df797b7d)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.5.8f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/DEV/NTI/2026-2027 Programmering/2dshooterbase6.2-main/Assets
+[Subsystems] Discovering subsystems at path C:/DEV/NTI/2026-2027 Programmering/TIA 2dshooter/Assets
 Forcing GfxDevice: Direct3D 12
 GfxDevice: creating device client; kGfxThreadingModeNonThreaded
 d3d12: failed to query info queue interface (0x80004002).
@@ -113,35 +124,18 @@ Direct3D:
     Vendor:          NVIDIA
     VRAM:            16175 MB
     App VRAM Budget: 15407 MB
-    Driver:          32.0.16.1656
+    Driver:          32.0.16.1664
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.5.8f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.5.8f1/Editor/Data/BCLExtensions/runtime/netstandard2.1'
 Mono path[2] = 'C:/Program Files/Unity/Hub/Editor/6000.5.8f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.5.8f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56100
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56108
 CodeReloadManager initialized
 Begin MonoManager ReloadAssembly
-[Licensing::Client] Error: HandshakeResponse reported an error:
-	ResponseCode: 505
-	ResponseStatus: Unsupported protocol version '1.18.1'.
-[Licensing::Module] Error: Failed to handshake to channel: "LicenseClient-krank"
-[Licensing::IpcConnector] LicenseClient-krank channel disconnected successfully.
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-krank-6000.5.8" at "2026-09-01T16:22:13.7467897Z"
-[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 10620, path: "C:/Program Files/Unity/Hub/Editor/6000.5.8f1/Editor/Data/Resources/Licensing/Client/Unity.Licensing.Client.exe")
-[Licensing::Module] LicensingClient has failed validation; ignoring
-[Licensing::Client] Handshaking with LicensingClient:
-  Version:                 1.18.1+9fbee8e
-  Session Id:              20a899cac78441be8ccd270a5dea2742
-  Correlation Id:          60ad6fd7a7aa2830a5ba558d89960f3f
-  External correlation Id: 5625474708930004640
-  Machine Id:              tZrLmtu1YNEJ3A39E52V3q1A25E=
-[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-krank-6000.5.8" (connect: 0.00s, validation: 0.00s, handshake: 0.00s)
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-krank-6000.5.8-notifications" at "2026-09-01T16:22:13.7537231Z"
-[Licensing::Module] Licensing Background thread has ended after 0.90s
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.5.8f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002370 seconds.
+Registered in 0.002088 seconds.
 Native extension for WindowsStandalone target not found
 Package Manager log level set to [2]
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
@@ -149,22 +143,23 @@ Package Manager log level set to [2]
 [Package Manager] Cannot connect to Unity Package Manager local server
 ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.490 seconds
-Domain Reload Profiling: 964ms
-	BeginReloadAssembly (117ms)
+- Finished resetting the current domain, in  0.729 seconds
+Domain Reload Profiling: 1194ms
+	BeginReloadAssembly (106ms)
 	RebuildCommonClasses (4ms)
-	RebuildNativeTypeToScriptingClass (14ms)
-	initialDomainReloadingComplete (66ms)
-	LoadAllAssembliesAndSetupDomain (271ms)
-		LoadAssemblies (112ms)
-		AnalyzeDomain (191ms)
-			TypeCache.Refresh (190ms)
-				TypeCache.ScanAssembly (177ms)
-	FinalizeReload (491ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (59ms)
+	LoadAllAssembliesAndSetupDomain (283ms)
+		LoadAssemblies (102ms)
+		AnalyzeDomain (198ms)
+			TypeCache.Refresh (197ms)
+				TypeCache.ScanAssembly (183ms)
+	FinalizeReload (730ms)
 		SetupLoadedEditorAssemblies (0ms)
-			BeforeProcessingInitializeOnLoad (87ms)
-			ProcessInitializeOnLoadAttributes (92ms)
-			ProcessInitializeOnLoadMethodAttributes (234ms)
+			InitializePlatformSupportModulesInManaged (4ms)
+			BeforeProcessingInitializeOnLoad (201ms)
+			ProcessInitializeOnLoadAttributes (123ms)
+			ProcessInitializeOnLoadMethodAttributes (304ms)
 Initializing Unity extensions:
 [Licensing::Client] Successfully resolved entitlement details
 [Licensing::Module] License group:
@@ -185,348 +180,75 @@ Native extension for WindowsStandalone target not found
 [Package Manager] Cannot connect to Unity Package Manager local server
 ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.412 seconds
-Domain Reload Profiling: 914ms
-	BeginReloadAssembly (179ms)
-		DisableScriptedObjects (8ms)
-		CreateAndSetChildDomain (24ms)
-	RebuildCommonClasses (7ms)
-	RebuildNativeTypeToScriptingClass (15ms)
-	initialDomainReloadingComplete (45ms)
-	LoadAllAssembliesAndSetupDomain (254ms)
-		LoadAssemblies (209ms)
-		AnalyzeDomain (57ms)
-			TypeCache.Refresh (38ms)
-				TypeCache.ScanAssembly (30ms)
-			BuildScriptInfoCaches (16ms)
-	FinalizeReload (413ms)
+- Finished resetting the current domain, in  0.692 seconds
+Domain Reload Profiling: 1282ms
+	BeginReloadAssembly (156ms)
+		DisableScriptedObjects (7ms)
+		CreateAndSetChildDomain (21ms)
+	RebuildCommonClasses (6ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (43ms)
+	LoadAllAssembliesAndSetupDomain (372ms)
+		LoadAssemblies (246ms)
+		AnalyzeDomain (119ms)
+			TypeCache.Refresh (81ms)
+				TypeCache.ScanAssembly (72ms)
+			BuildScriptInfoCaches (33ms)
+			ResolveRequiredComponents (3ms)
+	FinalizeReload (693ms)
 		SetupLoadedEditorAssemblies (0ms)
-			BeforeProcessingInitializeOnLoad (82ms)
-			ProcessInitializeOnLoadAttributes (113ms)
-			ProcessInitializeOnLoadMethodAttributes (69ms)
-			AfterProcessingInitializeOnLoad (8ms)
-		AwakeInstancesAfterBackupRestoration (7ms)
+			BeforeProcessingInitializeOnLoad (130ms)
+			ProcessInitializeOnLoadAttributes (183ms)
+			ProcessInitializeOnLoadMethodAttributes (130ms)
+			AfterProcessingInitializeOnLoad (10ms)
+		AwakeInstancesAfterBackupRestoration (12ms)
 AcceleratorClientConnectionCallback - disconnected - :0
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Universal Render Pipeline/Terrain/Lit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
-Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 56 Unused Serialized files (Serialized files now loaded: 0)
 Curl error 3: URL rejected: Malformed input to a URL function
-Unloading 1768 unused Assets / (0.8 MB). Loaded Objects now: 2522.
-Memory consumption went from 186.6 MB to 185.7 MB.
-Total: 4.692500 ms (FindLiveObjects: 0.162100 ms CreateObjectMapping: 0.340400 ms MarkObjects: 3.645300 ms  DeleteObjects: 0.542500 ms)
+Unloading 4179 unused Assets / (8.2 MB). Loaded Objects now: 4977.
+Memory consumption went from 265.7 MB to 257.5 MB.
+Total: 11.550900 ms (FindLiveObjects: 0.351300 ms CreateObjectMapping: 1.389400 ms MarkObjects: 6.556400 ms  DeleteObjects: 3.251000 ms)
 
 ========================================================================
 Received Prepare
 AcceleratorClientConnectionCallback - disconnected - :0
-Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 0 unused Assets / (0 B). Loaded Objects now: 2522.
-Memory consumption went from 184.6 MB to 184.6 MB.
-Total: 3.566300 ms (FindLiveObjects: 0.080200 ms CreateObjectMapping: 0.091300 ms MarkObjects: 3.387700 ms  DeleteObjects: 0.006300 ms)
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Universal Render Pipeline/Terrain/Lit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+Unloading 55 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 55 unused Assets / (4.4 MB). Loaded Objects now: 4977.
+Memory consumption went from 260.6 MB to 256.1 MB.
+Total: 8.081200 ms (FindLiveObjects: 0.280600 ms CreateObjectMapping: 0.473800 ms MarkObjects: 6.471900 ms  DeleteObjects: 0.853800 ms)
 
 Prepare: number of updated asset objects reloaded= 0
 ========================================================================
 Received Import Request.
-  Time of request: 2026-09-01T16:22:16.1757351Z
-  Time since last request: 37176.33240179999848 seconds.
+  Time of request: 2026-09-06T17:58:28.260066Z
+  Time since last request: 121749.58453670000017 seconds.
   importAddress: GUID: 7773b55d4ee631c4db0a3fa836b171e7 - Path: Assets/ShipController.cs - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI03
 Importing 'GUID: 7773b55d4ee631c4db0a3fa836b171e7 - Path: Assets/ShipController.cs - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI03' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI03)
-Imported 'GUID: 7773b55d4ee631c4db0a3fa836b171e7' -> (Import Result ID: 'e4f061e44af8cba754a0e51ff57a1540') in 0.087 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=be987a8b25d8ab013c057737c1245573 DependenciesID=05dc5774eaa8ab12527beb56205aa7c4 StaticDependenciesID=b2f93dccf12ef1ae645cfcce6bf944bd 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Prepare
-AcceleratorClientConnectionCallback - disconnected - :0
-[Licensing::Client] Successfully resolved entitlement details
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.606 seconds
-Domain Reload Profiling: 4662ms
-	BeginReloadAssembly (200ms)
-		DisableScriptedObjects (10ms)
-		CreateAndSetChildDomain (29ms)
-	RebuildCommonClasses (8ms)
-	RebuildNativeTypeToScriptingClass (14ms)
-	initialDomainReloadingComplete (61ms)
-	LoadAllAssembliesAndSetupDomain (3772ms)
-		LoadAssemblies (431ms)
-		AnalyzeDomain (3291ms)
-			TypeCache.Refresh (1024ms)
-				TypeCache.ScanAssembly (753ms)
-			BuildScriptInfoCaches (2256ms)
-			ResolveRequiredComponents (8ms)
-	FinalizeReload (607ms)
-		SetupLoadedEditorAssemblies (0ms)
-			BeforeProcessingInitializeOnLoad (93ms)
-			ProcessInitializeOnLoadAttributes (219ms)
-			ProcessInitializeOnLoadMethodAttributes (122ms)
-			AfterProcessingInitializeOnLoad (8ms)
-		AwakeInstancesAfterBackupRestoration (7ms)
-Shader 'Universal Render Pipeline/Nature/SpeedTree7': dependency 'BillboardShader' shader 'Universal Render Pipeline/Nature/SpeedTree7 Billboard' not found
-WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-WARNING: Shader Unsupported: 'Universal Render Pipeline/Terrain/Lit' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-Unloading 159 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 4280 unused Assets / (19.8 MB). Loaded Objects now: 4872.
-Memory consumption went from 284.3 MB to 264.4 MB.
-Total: 10.754400 ms (FindLiveObjects: 0.341900 ms CreateObjectMapping: 1.201200 ms MarkObjects: 3.505400 ms  DeleteObjects: 5.704800 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-AcceleratorClientConnectionCallback - disconnected - :0
-WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-WARNING: Shader Unsupported: 'Universal Render Pipeline/Terrain/Lit' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-Unloading 159 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 159 unused Assets / (13.0 MB). Loaded Objects now: 4872.
-Memory consumption went from 282.2 MB to 269.2 MB.
-Total: 7.553000 ms (FindLiveObjects: 0.186600 ms CreateObjectMapping: 0.394800 ms MarkObjects: 3.749600 ms  DeleteObjects: 3.220500 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time of request: 2026-09-01T16:24:46.7071342Z
-  Time since last request: 150.44359449999999 seconds.
-  importAddress: GUID: 21eaf8257e484bc4d86a147aad0d50d0 - Path: Assets/DefaultVolumeProfile.asset - Importer: PreviewImporter
-Importing 'GUID: 21eaf8257e484bc4d86a147aad0d50d0 - Path: Assets/DefaultVolumeProfile.asset - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: 21eaf8257e484bc4d86a147aad0d50d0' -> (Import Result ID: '508a4c738bd7e0034bd2e71ab9a796c1') in 0.017 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=54d3ee3a45794be33a82bb144800ec96 DependenciesID=0ce88ff118e2edd1dbdfe10e4a7ee804 StaticDependenciesID=b02d773e219588bd79d5f73d14970680 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time of request: 2026-09-01T16:24:46.7285225Z
-  Time since last request: 0.0023248 seconds.
-  importAddress: GUID: 5b917404c2f246748820c4050c47c0ac - Path: Assets/UniversalRenderPipelineGlobalSettings.asset - Importer: PreviewImporter
-Importing 'GUID: 5b917404c2f246748820c4050c47c0ac - Path: Assets/UniversalRenderPipelineGlobalSettings.asset - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: 5b917404c2f246748820c4050c47c0ac' -> (Import Result ID: '97e604e6ec085b925e29468610e253f0') in 0.150 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f30e1db86d0ca6718df4a00c6e9966a0 DependenciesID=6934f86f332223cb19dc108cb5a84023 StaticDependenciesID=c51210ad5fad790f40bd717eb665e9d3 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 229
-========================================================================
-Received Import Request.
-  Time of request: 2026-09-01T16:24:48.5462524Z
-  Time since last request: 1.6621932 seconds.
-  importAddress: GUID: 00000000000000001000000000000000 - Path: Assets - Importer: PreviewImporter
-Importing 'GUID: 00000000000000001000000000000000 - Path: Assets - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: 00000000000000001000000000000000' -> (Import Result ID: '3aa02e5fcf64c7505b6d074e63811f0f') in 0.000 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=923ecb25fcaecb4cb3c936046707f967 DependenciesID=983b8953d5ce8a7aaf78e1ef9832f984 StaticDependenciesID=1b9e5a313c60f6b85df4db3605c5c793 
+Imported 'GUID: 7773b55d4ee631c4db0a3fa836b171e7' -> (Import Result ID: 'c3629c056077bdc7bbb17488e16b9ef2') in 0.078 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=6f0bec8bbe2b1d44de29e823a4ed99cd DependenciesID=f35151ca597021aeb0765b636124a197 StaticDependenciesID=68efbb6df1e3ea304a50d59ec9f1b0f8 
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 0
 ========================================================================
 Received Import Request.
-  Time of request: 2026-09-01T16:24:49.9425538Z
-  Time since last request: 1.3956292 seconds.
-  importAddress: GUID: 21eaf8257e484bc4d86a147aad0d50d0 - Path: Assets/DefaultVolumeProfile.asset - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI03
-Importing 'GUID: 21eaf8257e484bc4d86a147aad0d50d0 - Path: Assets/DefaultVolumeProfile.asset - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI03' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI03)
-Imported 'GUID: 21eaf8257e484bc4d86a147aad0d50d0' -> (Import Result ID: 'd92871c47a39484284640104c691bb52') in 0.065 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=451133cbb497acc19209b0c5b9dc4f81 DependenciesID=b9e9be34fbcfbbcb93a1ab792dcb9dc0 StaticDependenciesID=bcfa576e573253cdb5bd707fb1d7e1b3 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Prepare
-AcceleratorClientConnectionCallback - disconnected - :0
-WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-WARNING: Shader Unsupported: 'Universal Render Pipeline/Terrain/Lit' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-Unloading 159 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 164 unused Assets / (13.1 MB). Loaded Objects now: 4873.
-Memory consumption went from 292.5 MB to 279.4 MB.
-Total: 8.011500 ms (FindLiveObjects: 0.184300 ms CreateObjectMapping: 0.395600 ms MarkObjects: 4.035300 ms  DeleteObjects: 3.395100 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-AcceleratorClientConnectionCallback - disconnected - :0
-WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-WARNING: Shader Unsupported: 'Universal Render Pipeline/Terrain/Lit' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-Unloading 159 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 159 unused Assets / (13.0 MB). Loaded Objects now: 4873.
-Memory consumption went from 292.1 MB to 279.2 MB.
-Total: 8.349200 ms (FindLiveObjects: 0.191000 ms CreateObjectMapping: 0.401500 ms MarkObjects: 4.425100 ms  DeleteObjects: 3.330500 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time of request: 2026-09-01T16:26:35.9964174Z
-  Time since last request: 105.98901360000001 seconds.
-  importAddress: GUID: 60f778ee0902b3244870e2e84d71fad7 - Path: Assets/New Universal Render Pipeline Asset_Renderer.asset - Importer: PreviewImporter
-Importing 'GUID: 60f778ee0902b3244870e2e84d71fad7 - Path: Assets/New Universal Render Pipeline Asset_Renderer.asset - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: 60f778ee0902b3244870e2e84d71fad7' -> (Import Result ID: '94b906aa1dc59f71837eb1a74fda067a') in 0.038 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=9dd1dec38556ce096494ac4b0eaeea72 DependenciesID=e06eb3027e6038dc71d02fa916d8b4a5 StaticDependenciesID=2788a19ede0b68b5dc2b95d6b77eb37a 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 68
-========================================================================
-Received Import Request.
-  Time of request: 2026-09-01T16:26:36.96052Z
-  Time since last request: 0.9240844 seconds.
-  importAddress: GUID: ea400f1b5f7b7df4eac4f7463704c68f - Path: Assets/New Universal Render Pipeline Asset.asset - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI03
-Importing 'GUID: ea400f1b5f7b7df4eac4f7463704c68f - Path: Assets/New Universal Render Pipeline Asset.asset - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI03' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI03)
-Imported 'GUID: ea400f1b5f7b7df4eac4f7463704c68f' -> (Import Result ID: 'c2ae6353b6763560d74d6011405c2ebe') in 0.076 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=996c46421533c9468a3cfb9b3b63625e DependenciesID=7cedfc1b02a2a626a3db9d109c106379 StaticDependenciesID=47da93b687bd41751d54dcffa09b0065 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 71
-========================================================================
-Received Prepare
-AcceleratorClientConnectionCallback - disconnected - :0
-WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-WARNING: Shader Unsupported: 'Universal Render Pipeline/Terrain/Lit' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-Unloading 138 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 138 unused Assets / (11.1 MB). Loaded Objects now: 4944.
-Memory consumption went from 290.9 MB to 279.7 MB.
-Total: 8.874000 ms (FindLiveObjects: 0.307500 ms CreateObjectMapping: 0.597700 ms MarkObjects: 4.367500 ms  DeleteObjects: 3.600000 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-AcceleratorClientConnectionCallback - disconnected - :0
-WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-WARNING: Shader Unsupported: 'Universal Render Pipeline/Terrain/Lit' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-Unloading 138 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 138 unused Assets / (11.1 MB). Loaded Objects now: 4944.
-Memory consumption went from 291.0 MB to 279.9 MB.
-Total: 8.030600 ms (FindLiveObjects: 0.187300 ms CreateObjectMapping: 0.403300 ms MarkObjects: 4.156800 ms  DeleteObjects: 3.282000 ms)
-
-Prepare: number of updated asset objects reloaded= 18
-========================================================================
-Received Prepare
-AcceleratorClientConnectionCallback - disconnected - :0
-WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-WARNING: Shader Unsupported: 'Universal Render Pipeline/Terrain/Lit' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-Unloading 138 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 138 unused Assets / (11.1 MB). Loaded Objects now: 4944.
-Memory consumption went from 291.1 MB to 280.0 MB.
-Total: 8.382800 ms (FindLiveObjects: 0.252800 ms CreateObjectMapping: 0.283900 ms MarkObjects: 4.688700 ms  DeleteObjects: 3.156100 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time of request: 2026-09-01T16:27:49.4254524Z
-  Time since last request: 72.38761169999999 seconds.
-  importAddress: GUID: 60f778ee0902b3244870e2e84d71fad7 - Path: Assets/New Universal Render Pipeline Asset_Renderer.asset - Importer: PreviewImporter
-Importing 'GUID: 60f778ee0902b3244870e2e84d71fad7 - Path: Assets/New Universal Render Pipeline Asset_Renderer.asset - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: 60f778ee0902b3244870e2e84d71fad7' -> (Import Result ID: '2860c555b108b821919e8e792c82435e') in 0.011 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=9dd1dec38556ce096494ac4b0eaeea72 DependenciesID=5695f04b03518dd0b000cac0ddb6acac StaticDependenciesID=2788a19ede0b68b5dc2b95d6b77eb37a 
+  Time of request: 2026-09-06T17:58:29.825688Z
+  Time since last request: 1.4756239 seconds.
+  importAddress: GUID: 7773b55d4ee631c4db0a3fa836b171e7 - Path: Assets/ShipController.cs - Importer: PreviewImporter
+Importing 'GUID: 7773b55d4ee631c4db0a3fa836b171e7 - Path: Assets/ShipController.cs - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: 7773b55d4ee631c4db0a3fa836b171e7' -> (Import Result ID: '6dc63de8fd037c53d66e5a0c6aa0e5d7') in 0.003 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3f9d1436b15dfacc201880d4f44bd29f DependenciesID=e3876efe5a6ea6416016f4a19a75c8ee StaticDependenciesID=1d9ab3517b7d20943b624248506d75f8 
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time of request: 2026-09-01T16:27:49.4397359Z
-  Time since last request: 0.0001277 seconds.
-  importAddress: GUID: 012449b2a06296040b0011710459fe19 - Path: Assets/ShooterBase.inputactions - Importer: PreviewImporter
-Importing 'GUID: 012449b2a06296040b0011710459fe19 - Path: Assets/ShooterBase.inputactions - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: 012449b2a06296040b0011710459fe19' -> (Import Result ID: '0d9147468e0760246cb04a6f6fdb170c') in 0.004 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b8d385f8112f0e9b11161c88540da84a DependenciesID=5fad3d921becd689780401a75389398e StaticDependenciesID=12e9deaeeb62c04546a78510309e0b8a 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 14
-========================================================================
-Received Import Request.
-  Time of request: 2026-09-01T16:27:50.2212261Z
-  Time since last request: 0.7752408 seconds.
-  importAddress: GUID: 21eaf8257e484bc4d86a147aad0d50d0 - Path: Assets/DefaultVolumeProfile.asset - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI03
-Importing 'GUID: 21eaf8257e484bc4d86a147aad0d50d0 - Path: Assets/DefaultVolumeProfile.asset - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI03' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI03)
-Imported 'GUID: 21eaf8257e484bc4d86a147aad0d50d0' -> (Import Result ID: '64f9395a0c0e40657f8c01cea1ac77e0') in 0.007 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=0ffab66af3376148368e9097862f5677 DependenciesID=d4db2cfadd230675dc3fa1d75688b9c3 StaticDependenciesID=b7ee125cfda4cfe4611ea09b4fd10a87 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 20
-========================================================================
-Received Prepare
-AcceleratorClientConnectionCallback - disconnected - :0
-WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-WARNING: Shader Unsupported: 'Universal Render Pipeline/Terrain/Lit' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-Unloading 138 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 138 unused Assets / (11.2 MB). Loaded Objects now: 4944.
-Memory consumption went from 291.0 MB to 279.8 MB.
-Total: 8.345800 ms (FindLiveObjects: 0.223300 ms CreateObjectMapping: 0.297100 ms MarkObjects: 4.218300 ms  DeleteObjects: 3.606100 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-AcceleratorClientConnectionCallback - disconnected - :0
-WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-WARNING: Shader Unsupported: 'Universal Render Pipeline/Terrain/Lit' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-Unloading 138 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 209 unused Assets / (13.0 MB). Loaded Objects now: 4873.
-Memory consumption went from 291.1 MB to 278.1 MB.
-Total: 8.446700 ms (FindLiveObjects: 0.176300 ms CreateObjectMapping: 0.280400 ms MarkObjects: 4.270400 ms  DeleteObjects: 3.718400 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-AcceleratorClientConnectionCallback - disconnected - :0
-WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-WARNING: Shader Unsupported: 'Universal Render Pipeline/Terrain/Lit' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-Unloading 159 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 159 unused Assets / (13.0 MB). Loaded Objects now: 4873.
-Memory consumption went from 295.8 MB to 282.9 MB.
-Total: 8.987300 ms (FindLiveObjects: 0.175600 ms CreateObjectMapping: 0.345600 ms MarkObjects: 4.881900 ms  DeleteObjects: 3.582800 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-AcceleratorClientConnectionCallback - disconnected - :0
-WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-WARNING: Shader Unsupported: 'Universal Render Pipeline/Terrain/Lit' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-Unloading 159 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 159 unused Assets / (13.0 MB). Loaded Objects now: 4873.
-Memory consumption went from 295.9 MB to 283.0 MB.
-Total: 9.793400 ms (FindLiveObjects: 0.173800 ms CreateObjectMapping: 0.398200 ms MarkObjects: 5.563700 ms  DeleteObjects: 3.656600 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-AcceleratorClientConnectionCallback - disconnected - :0
-WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-WARNING: Shader Unsupported: 'Universal Render Pipeline/Terrain/Lit' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-Unloading 159 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 159 unused Assets / (13.0 MB). Loaded Objects now: 4873.
-Memory consumption went from 296.0 MB to 283.1 MB.
-Total: 9.222300 ms (FindLiveObjects: 0.307300 ms CreateObjectMapping: 0.367400 ms MarkObjects: 4.375800 ms  DeleteObjects: 4.170500 ms)
-
-Prepare: number of updated asset objects reloaded= 0
 Editor requested this worker to shutdown with reason: Editor is closing down
 AcceleratorClientConnectionCallback - disconnected - :0
 AssetImportWorker is now disconnected from the server
