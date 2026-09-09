@@ -8,5 +8,10 @@ public class BoltController : MonoBehaviour
   void Update()
   {
     transform.Translate(Vector2.up * speed * Time.deltaTime);
+  
+    if (transform.position.y > Camera.main.orthographicSize)
+    {
+      Destroy(this.gameObject);
+    }
   }
 }

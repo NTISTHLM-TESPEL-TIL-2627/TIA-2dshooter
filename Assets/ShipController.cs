@@ -9,13 +9,24 @@ public class ShipController : MonoBehaviour
 
   [SerializeField]
   GameObject boltPrefab;
- 
+
+  [SerializeField]
+  Transform gunPosition;
+
   void Update()
   {
-    Instantiate(boltPrefab, transform.position, Quaternion.identity);
-    transform.Translate(movement * speed * Time.deltaTime);
+    transform.Translate(movement
+      * speed
+      * Time.deltaTime);
   }
-  
+
+  void OnFire(InputValue value)
+  {
+    Instantiate(boltPrefab,
+      gunPosition.position,
+      Quaternion.identity);
+  }
+
   void OnMove(InputValue value)
   {
     movement = value.Get<Vector2>();
