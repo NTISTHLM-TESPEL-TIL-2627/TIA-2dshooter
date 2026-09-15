@@ -13,8 +13,17 @@ public class ShipController : MonoBehaviour
   [SerializeField]
   Transform gunPosition;
 
+  float timeSinceLastShot = 0;
+  [SerializeField]
+  float timeBetweenShots = 1f;
+
   void Update()
   {
+    if (timeSinceLastShot < timeBetweenShots)
+    {
+      timeSinceLastShot += Time.deltaTime;
+    }
+
     transform.Translate(movement
       * speed
       * Time.deltaTime);
@@ -22,9 +31,13 @@ public class ShipController : MonoBehaviour
 
   void OnFire(InputValue value)
   {
-    Instantiate(boltPrefab,
-      gunPosition.position,
-      Quaternion.identity);
+    if (timeSinceLastShot > timeBetweenShots)
+    {
+      Instantiate(boltPrefab,
+        gunPosition.position,
+        Quaternion.identity);
+      timeSinceLastShot = 0;
+    }
   }
 
   void OnMove(InputValue value)
