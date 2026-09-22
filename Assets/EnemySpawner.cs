@@ -11,6 +11,13 @@ public class EnemySpawner : MonoBehaviour
 
   void Update()
   {
-    Instantiate(enemyPrefab);
+    timeSinceLastEnemy += Time.deltaTime;
+
+    if (timeSinceLastEnemy > timeBetweenEnemies)
+    {
+      Instantiate(enemyPrefab);
+      timeSinceLastEnemy = 0;
+    }
+
   }
 }
