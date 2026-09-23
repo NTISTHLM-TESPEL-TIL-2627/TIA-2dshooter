@@ -5,6 +5,9 @@ public class EnemyController : MonoBehaviour
   [SerializeField]
   float speed = 3f;
 
+  [SerializeField]
+  GameObject explosionPrefab;
+
   void Start()
   {
     transform.position = new(
@@ -24,6 +27,12 @@ public class EnemyController : MonoBehaviour
 
   void OnTriggerEnter2D(Collider2D collision)
   {
-    Destroy(this.gameObject);
+    if (collision.gameObject.tag == "Projectile")
+    {
+      Destroy(this.gameObject);
+      Instantiate(explosionPrefab,
+        transform.position,
+        Quaternion.identity);
+    }
   }
 }
