@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class ShipController : MonoBehaviour
 {
@@ -44,5 +45,14 @@ public class ShipController : MonoBehaviour
   {
     movement = value.Get<Vector2>();
     // print("I'd like to move it, move it");
+  }
+
+  void OnTriggerEnter2D(Collider2D collision)
+  {
+    if (collision.gameObject.tag == "Enemy")
+    {
+      print("GAME OVER");
+      SceneManager.LoadScene("GameOver");
+    }
   }
 }
