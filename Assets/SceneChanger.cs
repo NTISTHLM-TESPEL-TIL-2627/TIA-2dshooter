@@ -3,8 +3,13 @@ using UnityEngine.SceneManagement;
 
 public class SceneChanger : MonoBehaviour
 {
-  public void ChangeScene()
+  public void ChangeScene(string sceneName)
   {
-    SceneManager.LoadScene("Main");
+    SceneManager.LoadScene(sceneName);
+  }
+
+  public void GotoStart()
+  {
+    SceneManager.LoadScene("Start");
   }
 }
