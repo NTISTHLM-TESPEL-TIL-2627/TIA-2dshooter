@@ -1,12 +1,20 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ShipController : MonoBehaviour
 {
   Vector2 movement = Vector2.zero;
 
   float speed = 5f;
+
+  [SerializeField]
+  int maxHealth = 3;
+  int health = 3;
+
+  [SerializeField]
+  Slider healthSlider;
 
   [SerializeField]
   GameObject boltPrefab;
@@ -17,6 +25,13 @@ public class ShipController : MonoBehaviour
   float timeSinceLastShot = 0;
   [SerializeField]
   float timeBetweenShots = 1f;
+
+  void Start()
+  {
+    health = maxHealth;
+    healthSlider.maxValue = maxHealth;
+    healthSlider.value = health;
+  }
 
   void Update()
   {
@@ -51,8 +66,12 @@ public class ShipController : MonoBehaviour
   {
     if (collision.gameObject.tag == "Enemy")
     {
-      print("GAME OVER");
-      SceneManager.LoadScene("GameOver");
+      health--;
+      healthSlider.value = health;
+      if (health <= 0)
+      {
+        SceneManager.LoadScene("GameOver");
+      }
     }
   }
 }
